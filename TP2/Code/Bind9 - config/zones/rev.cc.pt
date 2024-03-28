@@ -1,0 +1,23 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	cc.pt. webmaster.cc.pt. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	Servidor1.cc.pt.
+Servidor1	IN	A	10.4.4.1 ;
+
+4.4.1	IN	PRT	Servidor1.cc.pt.
+4.4.2	IN	PRT	Servidor2.cc.pt.
+1.1.1	IN	PRT	Portatil1.cc.pt.
+1.1.2	IN	PRT	Portatil2.cc.pt.
+2.2.1	IN	PRT	PC1.cc.pt.
+2.2.2	IN	PRT	PC2.cc.pt.
+3.3.1	IN	PRT	Roma.cc.pt.
+3.3.2	IN	PRT	Paris.cc.pt.
+1.0.0	IN	PTR	localhost.
